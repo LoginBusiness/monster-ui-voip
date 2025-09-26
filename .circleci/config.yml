@@ -122,7 +122,8 @@ jobs:
           name: 'Building CHANGELOG and VERSION files'
           command: |
             cd $BUILD_ROOT
-            ./package_docs
+            echo "${VERSION}" > $BUILD_ROOT/SOURCES/VERSION
+            echo "${CIRCLE_TAG:-$CIRCLE_SHA1}" > $BUILD_ROOT/SOURCES/CHANGELOG
       -
         run:
           name: 'Preparing source for packaging'
@@ -248,7 +249,8 @@ jobs:
           name: 'Building CHANGELOG and VERSION files'
           command: |
             cd $BUILD_ROOT
-            ./package_docs
+            echo "${VERSION}" > $BUILD_ROOT/SOURCES/VERSION
+            echo "${CIRCLE_TAG:-$CIRCLE_SHA1}" > $BUILD_ROOT/SOURCES/CHANGELOG
       -
         run:
           name: 'Preparing source for packaging'
@@ -374,7 +376,8 @@ jobs:
           name: 'Building CHANGELOG and VERSION files'
           command: |
             cd $BUILD_ROOT
-            ./package_docs
+            echo "${VERSION}" > $BUILD_ROOT/SOURCES/VERSION
+            echo "${CIRCLE_TAG:-$CIRCLE_SHA1}" > $BUILD_ROOT/SOURCES/CHANGELOG
       -
         run:
           name: 'Preparing source for packaging'
