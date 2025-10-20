@@ -677,7 +677,7 @@ define(function(require) {
 					row.data('search').toLowerCase().indexOf(searchString) < 0 ? row.hide() : row.show();
 				});
 
-				if (rows.size() > 0) {
+				if (rows.length > 0) {
 					rows.is(':visible') ? emptySearch.hide() : emptySearch.show();
 				}
 			});
