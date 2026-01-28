@@ -255,7 +255,7 @@ define(function(require) {
 					$row.data('search').toLowerCase().indexOf(searchString) < 0 ? $row.hide() : $row.show();
 				});
 
-				if (rows.size() > 0) {
+				if (rows.length > 0) {
 					rows.is(':visible') ? emptySearch.hide() : emptySearch.show();
 				}
 			});
@@ -1411,7 +1411,7 @@ define(function(require) {
 				var phoneRow = $(this).parents('.item-row'),
 					emptyRow = phoneRow.siblings('.empty-row');
 
-				if (phoneRow.siblings('.item-row').size() === 0) {
+				if (phoneRow.siblings('.item-row').length === 0) {
 					emptyRow.show();
 				}
 
